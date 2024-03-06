@@ -67,3 +67,10 @@ variable "instance_name" {
 
 }
 
+variable "keypair_name" {
+  description = "Name of the key pair"
+  type        = string
+  default     = "deployer-key"
+
+}
+
