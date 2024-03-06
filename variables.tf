@@ -96,3 +96,11 @@ variable "ebs_block_device_size" {
   type        = number
   default     = 20
 }
+
+variable "s3_bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+  default     = "my-app-s3-bucket"
+
+}
+

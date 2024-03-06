@@ -22,3 +22,11 @@ resource "aws_instance" "app_server" {
   }
 
 }
+
+resource "aws_s3_bucket" "app_s3" {
+  bucket = var.s3_bucket_name
+
+  tags = {
+    Name = var.s3_bucket_name
+  }
+}
