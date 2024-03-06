@@ -74,3 +74,13 @@ variable "keypair_name" {
 
 }
 
+variable "cpu_credits" {
+  description = "CPU credits for the instance"
+  type        = string
+  validation {
+    condition     = anytrue([var.cpu_credits == "standard", var.cpu_credits == "unlimited"])
+    error_message = "CPU credits must be either standard or unlimited"
+  }
+  default = "standard"
+
+}
