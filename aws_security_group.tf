@@ -10,8 +10,8 @@ resource "aws_security_group" "app_sg_ssh" {
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
+    from_port   = 22
+    to_port     = 22
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -34,8 +34,8 @@ resource "aws_security_group" "app_sg_http" {
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
+    from_port   = 80
+    to_port     = 80
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -58,8 +58,8 @@ resource "aws_security_group" "app_sg_https" {
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
+    from_port   = 433
+    to_port     = 433
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
