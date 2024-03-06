@@ -8,6 +8,10 @@ resource "aws_instance" "app_server" {
 
   key_name = aws_key_pair.deployer.key_name
 
+  credit_specification {
+    cpu_credits = "standard"
+  }
+
   tags = {
     Name = var.instance_name
   }
