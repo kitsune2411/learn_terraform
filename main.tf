@@ -12,6 +12,11 @@ resource "aws_instance" "app_server" {
     cpu_credits = var.cpu_credits
   }
 
+  ebs_block_device {
+    device_name = var.ebs_block_device_name
+    volume_size = var.ebs_block_device_size
+  }
+
   tags = {
     Name = var.instance_name
   }

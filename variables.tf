@@ -84,3 +84,15 @@ variable "cpu_credits" {
   default = "standard"
 
 }
+
+variable "ebs_block_device_name" {
+  description = "Name of the EBS block device"
+  type        = string
+  default     = "/dev/sda1"
+}
+
+variable "ebs_block_device_size" {
+  description = "Size of the EBS block device"
+  type        = number
+  default     = 20
+}
